@@ -8,7 +8,7 @@ from kaggle_otto2.data_loader import OttoDataLoader
 from kaggle_otto2.feature import FeatureBase
 
 """
-itemの直近xx日間のinter, click, cart, orderの数のランキング
+过去 xx 天内按浏览次数、点击次数、购物车次数和订单次数对商品进行排名
 - aid
 - item_inter_rank_3d
 - item_click_rank_3d

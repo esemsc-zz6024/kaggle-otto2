@@ -6,7 +6,7 @@ from kaggle_otto2.data_loader import OttoDataLoader
 from kaggle_otto2.feature import FeatureBase
 
 """
-userの最初/最後からのイベントの順番
+按用户从第一个/最后一个的顺序排列事件
 - user_item_first_inter_rank
 - user_item_first_click_rank
 - user_item_first_cart_rank

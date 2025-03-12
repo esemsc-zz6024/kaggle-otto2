@@ -7,7 +7,7 @@ from kaggle_otto2.data_loader import OttoDataLoader
 from kaggle_otto2.feature import FeatureBase
 
 """
-userの最初/最後のイベントの曜日
+用户第一次/最后一次活动的日期
 - user_first_inter_dow
 - user_first_click_dow
 - user_first_cart_dow

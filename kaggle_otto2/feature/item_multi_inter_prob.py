@@ -6,7 +6,7 @@ from kaggle_otto2.data_loader import OttoDataLoader
 from kaggle_otto2.feature import FeatureBase
 
 """
-itemがリピートしてclick/cart/orderされる確率
+再次点击/加入购物车/订购某件商品的概率
 - aid
 - item_multi_inter_prob
 - item_multi_click_prob

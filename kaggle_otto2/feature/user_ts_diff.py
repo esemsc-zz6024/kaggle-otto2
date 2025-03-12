@@ -7,7 +7,7 @@ from kaggle_otto2.data_loader import OttoDataLoader
 from kaggle_otto2.feature import FeatureBase
 
 """
-userの最初と最後のイベントの時間差
+用户第一次和最后一次事件之间的时间差
 - session
 - user_ts_diff
 - user_min_all_min_ts_diff

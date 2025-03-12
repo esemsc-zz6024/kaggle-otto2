@@ -7,7 +7,7 @@ from kaggle_otto2.data_loader import OttoDataLoader
 from kaggle_otto2.feature import FeatureBase
 
 """
-userのinterの時間帯
+用户所在时区的平均时间
 - user_inter_ts_hour_mean
 - user_click_ts_hour_mean
 - user_cart_ts_hour_mean

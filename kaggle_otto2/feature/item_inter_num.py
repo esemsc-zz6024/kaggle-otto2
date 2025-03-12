@@ -7,7 +7,7 @@ from kaggle_otto2.data_loader import OttoDataLoader
 from kaggle_otto2.feature import FeatureBase
 
 """
-itemの直近xx日間のinter, click, cart, orderの数
+过去 xx 天内该商品的互动次数、点击次数、购物车次数和订单次数
 - aid
 - item_inter_num_3d
 - item_click_num_3d

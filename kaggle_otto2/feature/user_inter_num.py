@@ -6,7 +6,7 @@ from kaggle_otto2.data_loader import OttoDataLoader
 from kaggle_otto2.feature import FeatureBase
 
 """
-userのinter数
+用户互动次数
 - session
 - user_inter_num
 - user_click_num

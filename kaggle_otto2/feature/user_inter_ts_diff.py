@@ -6,7 +6,7 @@ from kaggle_otto2.data_loader import OttoDataLoader
 from kaggle_otto2.feature import FeatureBase
 
 """
-userのinterの時間差
+用户之间的时间差
 - session
 - user_inter_ts_diff_min
 - user_inter_ts_diff_mean

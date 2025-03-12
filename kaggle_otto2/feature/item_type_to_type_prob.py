@@ -7,7 +7,7 @@ from kaggle_otto2.data_loader import OttoDataLoader
 from kaggle_otto2.feature import FeatureBase
 
 """
-itemの直近xx日間のclick→cart/order, cart→orderの確率
+过去 xx 天内点击→购物车/订单、购物车→订单的概率
 - aid
 - item_click_to_order_prob_3d
 - item_click_to_order_prob_7d

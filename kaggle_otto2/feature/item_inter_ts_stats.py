@@ -6,9 +6,9 @@ from kaggle_otto2.data_loader import OttoDataLoader
 from kaggle_otto2.feature import FeatureBase
 
 
-# ユーザごとのsession tsの統計量
-# cv, lbでshift しないようにstanderizeをかませる
-# groupby 内で window関数は使えないのでses, aidで計算→unique
+# 每个用户的会话 ts 统计信息
+# 使用标准化来避免 cv 和 lb 的偏移
+# groupby 中不能使用窗口函数，所以用 ses 和 aid → unique 来计算
 def standerize(expr: pl.Expr, col: str) -> pl.Expr:
     return (expr - pl.mean(col)) / pl.std(col)
 

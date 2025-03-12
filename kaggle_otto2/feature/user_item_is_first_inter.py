@@ -6,7 +6,7 @@ from kaggle_otto2.data_loader import OttoDataLoader
 from kaggle_otto2.feature import FeatureBase
 
 """
-userの最初/最後のイベントかどうか
+该活动对于用户来说是否是第一个/最后一个
 - session
 - aid
 - user_item_is_first_inter
