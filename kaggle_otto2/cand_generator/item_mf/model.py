@@ -41,12 +41,12 @@ class ItemMFModel(nn.Module):
         idx2aid = data_loader.get_idx2aid()
         with TimeUtil.timer("prepare data"):
             if seed_type == "seq":
-                # 直近の履歴を重視するように重み付け
-                # devで実験してこれが一番良かった
+                # 加权强调近期历史
+                # 我在开发中测试了这个，结果证明它是最好的
                 weights = np.linspace(1.0, 0.2, 17)
                 k = len(weights)
                 with TimeUtil.timer("get test_aids"):
-                    # test sessionごとにitemのlistを取得
+                    # 获取每个测试会话的项目列表
                     test_aids_df = (
                         data_loader.get_test_df()
                         .sort(["session", "ts"], reverse=[False, True])
@@ -62,12 +62,12 @@ class ItemMFModel(nn.Module):
                     )
 
                 with TimeUtil.timer("get test_aids k"):
-                    # test sessionごとにitemのlistをk個にする
+                    # 为每个测试会话创建一个包含 k 个项目的列表
                     for session in test_aids.keys():
                         test_aids[session] = np.tile(test_aids[session], k)
                         test_aids[session] = test_aids[session][:k]
 
-                # aid_idxs(履歴のitemのindexのlist)を作成
+                # 创建 aid_idxs（历史项目索引列表）
                 sessions = []
                 aid_idxs = []
                 for session in test_aids.keys():
@@ -76,7 +76,7 @@ class ItemMFModel(nn.Module):
                 aid_idxs = np.array(aid_idxs)
 
                 with TimeUtil.timer("get query_vectors"):
-                    # 重み付け平均からquery_vectorsを作成
+                    # 根据加权平均值创建查询向量
                     w = np.array(
                         [
                             np.array(weights).reshape(len(weights), 1)
